@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/wickret/static/css/main.8b631615.chunk.css",
+    "main.js": "/wickret/static/js/main.52e9c4a8.chunk.js",
+    "main.js.map": "/wickret/static/js/main.52e9c4a8.chunk.js.map",
+    "runtime-main.js": "/wickret/static/js/runtime-main.f14fda36.js",
+    "runtime-main.js.map": "/wickret/static/js/runtime-main.f14fda36.js.map",
+    "static/js/2.c78741ba.chunk.js": "/wickret/static/js/2.c78741ba.chunk.js",
+    "static/js/2.c78741ba.chunk.js.map": "/wickret/static/js/2.c78741ba.chunk.js.map",
+    "index.html": "/wickret/index.html",
+    "precache-manifest.ef42303c6e4f183dc1f132526445459f.js": "/wickret/precache-manifest.ef42303c6e4f183dc1f132526445459f.js",
+    "service-worker.js": "/wickret/service-worker.js",
+    "static/css/main.8b631615.chunk.css.map": "/wickret/static/css/main.8b631615.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f14fda36.js",
+    "static/js/2.c78741ba.chunk.js",
+    "static/css/main.8b631615.chunk.css",
+    "static/js/main.52e9c4a8.chunk.js"
+  ]
+}
