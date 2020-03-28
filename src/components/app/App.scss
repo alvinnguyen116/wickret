@@ -1,0 +1,345 @@
+* {
+  --dark-blue: #0000b5;
+  --baby-blue: #1966ff;
+}
+
+.app {
+  min-height: 200vh;
+  position: absolute;
+  width: 100%;
+  transition: top 1s;
+  background-color: white;
+  overflow: hidden;
+
+  .download {
+    padding: 1em;
+    border-radius: 2em;
+    background-color: rgba(180, 211, 230, 0.35);
+    top: 2em;
+    right: 0;
+    position: fixed;
+    color: var(--baby-blue);
+    width: 100px;
+    margin-right: 3em;
+    height: 1em;
+    overflow: hidden;
+    transition: transform .5s;
+    z-index: 3;
+
+    &:hover {
+      background-color: #ffff43;
+      transform: scale(1.1,1.1);
+      mix-blend-mode: exclusion;
+      color: black;
+    }
+
+    .second,
+    .first {
+      position: absolute;
+      font-weight: bold;
+      top: 25%;
+      animation: left-to-right linear 4s infinite;
+      left: 100%;
+    }
+
+    .second {
+      animation-delay: 2s;
+    }
+  }
+
+  .nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: calc(100% - 213px);
+    justify-content: space-between;
+    color: var(--dark-blue);
+    font-weight: 600;
+    padding: 2em;
+    align-items: center;
+    z-index: 3;
+    transition: padding .25s linear;
+
+    .menu {
+      display: none;
+      z-index: 2;
+
+      svg {
+        fill: var(--dark-blue);
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+
+      > div {
+
+        &:not(.download) {
+          padding: 1em;
+          margin-right: 2em;
+          z-index: 2;
+        }
+
+        &:hover {
+          color: white;
+        }
+      }
+    }
+
+    .logo {
+      font-size: 1.5em;
+      flex-grow: 1;
+    }
+  }
+
+  header {
+    width: fit-content;
+    height: fit-content;
+    line-height: 1.75em;
+    padding: 1em;
+
+    h1 {
+      width: fit-content;
+      margin: 0;
+    }
+  }
+
+  .page {
+    min-height: 100vh;
+  }
+
+  .landing {
+    -webkit-background-clip: text;
+    background-color: var(--dark-blue);
+  }
+
+  .landing.page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    color: transparent;
+    transition: background-position .5s ease-out;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: radial-gradient(circle,
+            orange 0,
+            orange 2.2em,
+            pink 2.2em,
+            pink 4em,
+            var(--baby-blue) 4em,
+            var(--baby-blue) 5.5em,
+            var(--dark-blue) 5.5em);
+
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.custom-cursor {
+  --cursor-length: 1.5em;
+  background-color: var(--dark-blue);
+  position: absolute;
+  border-radius: 50%;
+  height: var(--cursor-length);
+  width: var(--cursor-length);
+  transition: transform .5s;
+  transform: translate(-50%,-50%);
+  z-index: 3;
+}
+
+.big-cursor {
+  --cursor-length: 40em;
+  height: var(--cursor-length);
+  width: var(--cursor-length);
+  position: absolute;
+  border-radius: 50%;
+  background-image: radial-gradient(circle,
+          rgba(255, 165, 0, 0.1) 0,
+          rgba(255, 165, 0, 0.1) 25%,
+          rgba(255, 192, 203, 0.1) 25%,
+          rgba(255, 192, 203, 0.1) 50%,
+          rgba(0, 0, 255, 0.1) 50%);
+  background-position: center;
+  transform: translate(-50%, -50%);
+  transition: top .1s, left .1s;
+  -webkit-background-clip: text;
+  color: transparent;
+  z-index: 1;
+}
+
+.scroll-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2.5em;
+  width: .5em;
+  margin: 5px;
+  background-color: var(--dark-blue);
+  border-radius: 10px;
+  transition: opacity .5s, top 1s;
+  z-index: 1;
+}
+
+.page.section-2 {
+  display: flex;
+  justify-content: center;
+  background-color: #0042305c;
+  transition: transform .25s linear;
+  align-items: center;
+  color: #ffff43;
+  perspective: 200px;
+  mix-blend-mode: exclusion;
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    letter-spacing: -2px;
+    position: relative;
+
+    h1 {
+      font-size: 4em;
+      line-height: 1em;
+      font-weight: 700;
+      opacity: .85;
+      text-align: center;
+    }
+
+    h2 {
+      margin-top: 1.5em;
+      font-size: 1.8em;
+      font-weight: unset;
+    }
+
+    .bp3-icon {
+      position: absolute;
+
+      svg {
+        width: 40px;
+        height: 40px;
+        fill: white;
+      }
+
+      &.icon-1 {
+        left: -130px;
+        top: -25px;
+      }
+      &.icon-2 {
+        left: 126px;
+        top: -120px
+      }
+      &.icon-3 {
+        right: 81px;
+        top: -115px;
+      }
+      &.icon-4 {
+        right: -150px;
+        top: -20px;
+      }
+      &.icon-5 {
+        right: -145px;
+        bottom: -25px;
+      }
+      &.icon-6 {
+        right: 50px;
+        bottom: -120px
+      }
+      &.icon-7 {
+        left: 126px;
+        bottom: -130px;
+      }
+      &.icon-8 {
+        left: -135px;
+        bottom: -20px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .download,
+  .app .nav-bar .right {
+    display: none;
+  }
+
+  .app .nav-bar {
+    padding: 1em;
+    right: unset;
+    width: -webkit-fill-available;
+
+    .logo {
+      flex-grow: unset;
+    }
+
+     .menu {
+      display: block;
+    }
+  }
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  color:#005ffe;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  background-color: white;
+  font-size: 3em;
+  font-weight: 500;
+  transition: height .25s, opacity .5s;
+
+  > div {
+    overflow: hidden;
+    line-height: 2;
+    transition: line-height .75s;
+  }
+}
+
+.mobile {
+  &-enter {
+    height: 0;
+
+    > div {
+      line-height: 0;
+    }
+
+    &-done {
+      > div {
+        line-height: 2;
+      }
+    }
+  }
+
+  &-exit {
+    opacity: 1;
+  }
+
+  &-exit-active {
+    opacity: 0;
+  }
+}
+
+
+@keyframes left-to-right{
+  from {
+    left: 100%;
+  }
+  to {
+    left: -100%;
+  }
+}
